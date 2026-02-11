@@ -109,3 +109,45 @@ main hr {
     background-color: #eee;
     height: 1px;
 }
+
+/* Submenu styles for Classes dropdown */
+.classes-dropdown .submenu {
+    position: relative;
+}
+
+.classes-dropdown .submenu > a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #333;
+}
+
+.classes-dropdown .submenu-content {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.classes-dropdown .submenu-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.classes-dropdown .submenu-content a:hover {
+    background-color: #ddd;
+}
+
+.classes-dropdown .submenu:hover .submenu-content {
+    display: block;
+}
+
+.classes-dropdown .submenu:hover > a {
+    background-color: #ddd;
+}

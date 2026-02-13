@@ -148,3 +148,42 @@ header a {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+/* APPLY NOW BUTTON WRAPPER - PERSISTENT ACROSS ALL PAGES */
+.apply-now-wrapper {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  float: left;
+  padding: 5px 5px;
+  margin-left: 1rem;
+}
+
+/* APPLY NOW BUTTON - PRIMARY CALL-TO-ACTION - PERSISTENT ACROSS ALL PAGES */
+.apply-now-btn {
+  background-color: #A51417;
+  color: #FFFFFF;
+  padding: 5px;
+  border-radius: 6px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+}
+
+.apply-now-btn:hover {
+  background-color: #8B0000;
+  text-decoration: none;
+}
+
+.navbar .apply-now-btn {
+  float: none;
+  padding: 10px 20px;
+  /* etc. */
+}

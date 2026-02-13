@@ -26,6 +26,13 @@
     font-size: 1.25em;
 }
 
+#visit-our-school .tour-contact {
+    color: #a51417;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
 #visit-our-school a {
     color: #a51417;
     border: #a51417;

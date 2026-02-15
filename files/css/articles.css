@@ -1,0 +1,94 @@
+@import url("common.css");
+
+/* Hero image area (optional, but matches your existing pattern) */
+.image-container {
+  background-image: url("https://nurseryschool.wustl.edu/files/2015/03/group-holi.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 260px;
+}
+/* Grid stays the same (keep your existing .article-grid rules) */
+
+.article-card {
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    background: #fff;
+    overflow: hidden;
+    transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
+  }
+  
+  .article-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.10);
+    border-color: #d8d8d8;
+  }
+  
+  .article-card-body {
+    padding: 18px 18px 16px 18px;
+  }
+  
+  .article-card-body h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    line-height: 1.25;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .article-card-body p {
+    margin: 0 0 14px 0;
+    color: rgb(85, 85, 85);
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .article-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+  
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 8px;
+  
+    border: 1px solid #d7d7d7;
+    background: #fafafa;
+  }
+  
+  .article-link:hover {
+    background: #f0f0f0;
+    border-color: #cfcfcf;
+    text-decoration: none;
+  }
+  
+  /* Optional: make card heights consistent */
+  .article-card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .article-card-body p {
+    flex: 1;
+  }  
+/* Keep your list styling consistent with your other pages */
+main ul {
+  padding-top: 10px;
+  margin-left: 1.5em;
+}
+
+main li {
+  color: rgb(85, 85, 85);
+  display: list-item;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 19.2px;
+  line-height: 27.84px;
+  list-style-type: disc;
+  margin-bottom: 15px;
+}

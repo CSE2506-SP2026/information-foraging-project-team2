@@ -181,9 +181,10 @@ header a {
   background-color: #8B0000;
   text-decoration: none;
 }
-
-.navbar .apply-now-btn {
-  float: none;
-  padding: 10px 20px;
-  /* etc. */
+/* force override navbar hover */
+.navbar a.apply-now-btn:hover {
+  background-color: #8B0000 !important;
+  color: #fff;
+  text-decoration: none;
 }
+

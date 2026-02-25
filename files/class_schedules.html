@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Class Schedules | Nursery School | Washington University in St. Louis</title>
+
+    <!-- Base stylesheet (keep yours if you want) -->
+    <link rel="stylesheet" type="text/css" href="files/css/form.css">
+
+    <!-- Page-local styling copied from your Panda example’s table/row styles -->
+    <style>
+      /* Layout */
+      #page-content {
+        width: 100%;
+      }
+
+      .row-two {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        align-items: flex-start;
+      }
+
+      .col {
+        flex: 1;
+        min-width: 320px;
+      }
+
+      .row-center {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .center-col {
+        width: min(800px, 100%);
+      }
+
+      /* Schedule table styling (matches your Panda file) */
+      .schedule-table {
+        border: none !important;
+        width: 100%;
+        margin-bottom: 40px;
+        margin-top: 20px;
+        border-collapse: collapse;
+      }
+
+      .schedule-table td {
+        width: 35%;
+        padding: 15px;
+        vertical-align: top;
+      }
+
+      .schedule-table td + td {
+        width: 65%;
+      }
+
+      .schedule-table tr:nth-child(odd) {
+        background-color: #f1f1f1;
+      }
+
+      .schedule-table tr:nth-child(even) {
+        background-color: #fff;
+      }
+
+      /* Small heading spacing similar to typical pages */
+      h1 {
+        margin-bottom: 6px;
+      }
+
+      h3 {
+        margin-top: 0;
+      }
+
+      .row-two-spaced {
+        margin-top: 20px;
+      }
+
+      /* Responsive: stack columns on small screens */
+      @media (max-width: 820px) {
+        .row-two {
+          flex-direction: column;
+        }
+        .col {
+          min-width: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <ts-load data-name="header"></ts-load>
+
+    <div id="page-content">
+      <main>
+        <!-- Row 1: Teddy (left) + Panda (right) -->
+        <div class="row-two">
+          <section class="col">
+            <h1>Teddy Bear Class Schedule</h1>
+            <h3>Ages 2 <span class="frac"><sup>1</sup>/<sub>2</sub></span> - 3 (morning)</h3>
+            <div id="class-schedule">
+              <table class="schedule-table">
+                <tbody>
+                  <tr>
+                    <td><strong>8:50 - 9:10 a.m.</strong></td>
+                    <td><strong>Welcome</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>9:10 - 10:10 a.m.</strong></td>
+                    <td><strong>Free Choice Time</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>10:10 - 10:20 a.m.</strong></td>
+                    <td><strong>Clean Up Time</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>10:20 - 10:35 a.m.</strong></td>
+                    <td><strong>Calendar, songs, story time</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>10:35 - 10:45 a.m.</strong></td>
+                    <td><strong>Wash hands, snack time</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>10:45 - 11:35 a.m.</strong></td>
+                    <td><strong>Outside time</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>11:35 - 11:40 a.m.</strong></td>
+                    <td><strong>Prepare for dismissal</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>11:40 - 11:45 a.m.</strong></td>
+                    <td><strong>Dismissal</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="col">
+            <h1>Panda Bear Class Schedule</h1>
+            <h3>Ages 2 <span class="frac"><sup>1</sup>/<sub>2</sub></span> - 3 (afternoon)</h3>
+            <div class="class-schedule">
+              <table class="schedule-table">
+                <tbody>
+                  <tr>
+                    <td><strong>12:30 p.m.</strong></td>
+                    <td><strong>Arrival</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>12:30 - 1:40 p.m.</strong></td>
+                    <td><strong>Free choice time</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>1:40 - 1:50 p.m.</strong></td>
+                    <td><strong>Clean up time</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>1:50 - 2:05 p.m.</strong></td>
+                    <td><strong>Songs, calendar, jobs</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>2:05 - 2:20 p.m.</strong></td>
+                    <td><strong>Snack time</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>2:20 - 3:00 p.m.</strong></td>
+                    <td><strong>Outdoor playtime</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>3:00 - 3:10 p.m.</strong></td>
+                    <td><strong>Story time</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>3:10 - 3:15 p.m.</strong></td>
+                    <td><strong>Departure</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+
+        <!-- Row 2: Bear Cubs left aligned -->
+        <div class="row-two" style="margin-top: 20px;">
+        <section class="col">
+            <h1>Bear Cub Class Schedule</h1>
+            <h3>Ages 3 - 4 (morning)</h3>
+            <div id="class-schedule">
+            <table class="schedule-table">
+                <tbody>
+                <tr>
+                    <td><strong>8:50 – 10:00 a.m.</strong></td>
+                    <td><strong>Arrival and outdoor play</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>10:00 – 10:15 a.m.</strong></td>
+                    <td><strong>Morning circle, calendar, songs</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>10:15 – 10:30 a.m.</strong></td>
+                    <td><strong>Wash hands, snack</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>10:30 – 11:20 a.m.</strong></td>
+                    <td><strong>Free choice</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>11:20 – 11:30 a.m.</strong></td>
+                    <td><strong>Clean up</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>11:30 – 11:40 a.m.</strong></td>
+                    <td><strong>Story</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>11:40 – 11:45 a.m.</strong></td>
+                    <td><strong>Departure</strong></td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+        </section>
+
+        <section class="col"></section>
+        </div>
+
+        <!-- Row 3: Big Bears (left) + Sun Bears (right) -->
+        <div class="row-two row-two-spaced">
+          <section class="col">
+            <h1>Big Bear Class Schedule</h1>
+            <h3>Ages 4 - 5 (morning)</h3>
+            <div class="class-schedule">
+              <table class="schedule-table">
+                <tbody>
+                  <tr>
+                    <td><strong>8:50 - 9:40 a.m.</strong></td>
+                    <td><strong>Arrival and outdoor play</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>9:40 - 9:45 a.m.</strong></td>
+                    <td><strong>Transition inside</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>9:45 - 10:00 a.m.</strong></td>
+                    <td><strong>Snack</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>10:00 - 10:15 a.m.</strong></td>
+                    <td><strong>Circle activities</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>10:15 - 11:00 a.m.</strong></td>
+                    <td><strong>Choice time</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>11:00 - 11:05 a.m.</strong></td>
+                    <td><strong>Clean up time</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>11:05 - 11:25 a.m.</strong></td>
+                    <td><strong>Small and large group activities</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>11:25 - 11:40 a.m.</strong></td>
+                    <td><strong>Songs and stories</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>11:40 - 11:45 a.m.</strong></td>
+                    <td><strong>Transition to lunch, extended day or car line</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="col">
+            <h1>Sun Bear Class Schedule</h1>
+            <h3>Ages 4 - 5 (afternoon)</h3>
+            <div class="class-schedule">
+              <table class="schedule-table">
+                <tbody>
+                  <tr>
+                    <td><strong>12:30 p.m.</strong></td>
+                    <td><strong>Carpool/arrival</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>12:30 - 1:00 p.m.</strong></td>
+                    <td><strong>Welcome, circle activities</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>1:00 - 2:00 p.m.</strong></td>
+                    <td><strong>Centers, free choice</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>2:00 - 2:10 p.m.</strong></td>
+                    <td><strong>Clean up, organize</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>2:10 - 2:25 p.m.</strong></td>
+                    <td><strong>Wash hands, snack</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>2:25 - 3:05 p.m.</strong></td>
+                    <td><strong>Outdoor play</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>3:05 - 3:15 p.m.</strong></td>
+                    <td><strong>Wrap up, dismissal</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <ts-load data-name="footer"></ts-load>
+    <script src="scripts/js/app.js"></script>
+  </body>
+</html>

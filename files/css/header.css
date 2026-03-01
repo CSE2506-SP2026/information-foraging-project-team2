@@ -87,6 +87,7 @@ header a {
 
 .dropdown .dropbtn {
     font-size: 16px;
+    margin-top: 5px;
     border: none;
     outline: none;
     color: white;
@@ -109,6 +110,10 @@ header a {
 .navbar a:hover,
 .dropdown:hover .dropbtn {
     background-color: #555;
+}
+
+#contact {
+    margin-top: 5px;   
 }
 
 

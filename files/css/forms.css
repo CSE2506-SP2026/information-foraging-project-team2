@@ -20,3 +20,81 @@ main li {
     list-style-type: disc;
     margin-bottom: 15px;
 }
+
+/* ---------- Page Structure ---------- */
+
+.page-header {
+  margin-bottom: 2.5rem;
+}
+
+.page-subtitle {
+  margin-top: 0.5rem;
+  color: #555;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* ---------- Section Styling ---------- */
+
+.forms-section {
+  margin-bottom: 3.5rem;   /* more breathing room between sections */
+}
+
+.forms-section h2 {
+  font-size: 1.6rem;       /* larger than h3 */
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e5e5;  /* subtle divider */
+  letter-spacing: 0.5px;
+}
+
+/* ---------- Individual Form Blocks ---------- */
+
+.form-item {
+  margin-bottom: 2rem;
+  padding: 1.25rem 1.5rem;
+  background-color: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 6px;
+}
+
+.form-title {
+  font-size: 1.2rem;   /* clearly smaller than h2 */
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.form-desc {
+  margin-bottom: 0.75rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ---------- Buttons ---------- */
+
+.button-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #a51417; /* WashU red tone */
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.button-link:hover {
+  background-color: #7f1012;
+}
+
+/* ---------- PDF List ---------- */
+
+.download-list {
+  margin-top: 0.75rem;
+  padding-left: 1.25rem;
+}
+
+.download-list li {
+  margin-bottom: 0.5rem;
+}

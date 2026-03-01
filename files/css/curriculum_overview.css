@@ -1,27 +1,132 @@
 @import url("common.css");
 @import url("side_menu.css");
-main ul {
-    margin-top: 1em;
-    padding-left: 2rem;
+
+/* ---------- Page Container ---------- */
+
+#page-content {
+  padding: 2.5rem 1.5rem;  /* left + right space */
 }
 
-main li {
-    font-size: 1.15em;
-    margin-bottom: 1em;
+main {
+  max-width: 1000px;       /* controls content width */
+  margin: 0 auto;          /* centers the content */
 }
 
-.classroom {
-    margin-top: 6em;
-    margin-bottom: 1em;
-    clear: both;
-    overflow: hidden;
+/* ---------- Page Header ---------- */
+
+.page-header {
+  margin-bottom: 3rem;
 }
 
-.classroom img {
-    float: left;
-    margin-right: 2.5em;
+.page-subtitle {
+  margin-top: 0.75rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
 }
 
-.classroom p {
-    font-size: 1.15em;
+/* ---------- Section Spacing ---------- */
+
+.section {
+  margin-top: 3.5rem;
+}
+
+.section h2 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+/* ---------- Cards ---------- */
+
+.card {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 1.5rem 1.75rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.mini-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+/* ---------- Grid Layout ---------- */
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem;
+}
+
+.subgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+/* ---------- Lists ---------- */
+
+.bullet-list {
+  padding-left: 1.25rem;
+}
+
+.bullet-list li {
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+/* ---------- Callout ---------- */
+
+.callout {
+  margin-top: 1.75rem;
+  padding: 1.5rem;
+  border-left: 6px solid #a51417;
+  background: #fff7f7;
+  border-radius: 10px;
+}
+
+.callout-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Photos ---------- */
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem;
+  margin-top: 1.5rem;
+}
+
+.photo img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .grid-2,
+  .subgrid,
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    max-width: 650px;
+  }
 }

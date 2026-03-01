@@ -1,17 +1,209 @@
-@import url('header.css');
-@import url('footer.css');
-@import url('common.css');
+@import url("header.css");
+@import url("footer.css");
+@import url("common.css");
 
-main * {
-    font-size: 18px;
+/* ---------- Page layout ---------- */
+.page-content {
+  padding: 2.5rem 1.25rem;       /* white space on sides */
 }
+
+main {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+main > p,
+.page-subtitle {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ---------- Form container (card) ---------- */
+.frm_forms {
+  margin-top: 1.25rem;
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 12px;
+  padding: 1.75rem 1.75rem 1.25rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Remove the default “big box” look */
 fieldset {
-    border: 1px solid gray;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
-button[type=submit] {
-    margin: 5px;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px gray solid;
+/* ---------- Typography reset (avoid main * global sizing) ---------- */
+/* This is the key fix: stop forcing everything to 18px */
+.frm_forms,
+.frm_forms * {
+  font-size: 16px;
+}
+
+/* Labels */
+.frm_primary_label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  color: #222;
+}
+
+/* Required asterisk */
+.frm_required {
+  color: #a51417; /* WashU-ish red */
+  margin-left: 0.2rem;
+}
+
+/* Help text under fields */
+.frm_description {
+  margin-top: 0.35rem;
+  color: #666;
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+/* ---------- Field spacing ---------- */
+.frm_form_field {
+  margin-bottom: 1.25rem;
+}
+
+.frm_top_container {
+  margin-top: 0;
+}
+
+/* ---------- Inputs, selects, textareas ---------- */
+.frm_forms input[type="text"],
+.frm_forms input[type="email"],
+.frm_forms input[type="tel"],
+.frm_forms input[type="date"],
+.frm_forms select,
+.frm_forms textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  background: #fff;
+  color: #111;
+  outline: none;
+}
+
+.frm_forms textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Focus state */
+.frm_forms input:focus,
+.frm_forms select:focus,
+.frm_forms textarea:focus {
+  border-color: #a51417;
+  box-shadow: 0 0 0 3px rgba(165, 20, 23, 0.12);
+}
+
+/* ---------- Address block layout ---------- */
+/* The address fields are inside .frm_combo_inputs_container */
+.frm_combo_inputs_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Street + line2 span both columns */
+#frm_field_1459-line1_container,
+#frm_field_1459-line2_container,
+#frm_field_1459-country_container {
+  grid-column: 1 / -1;
+}
+
+/* City / State / Zip in 3 columns on wide screens */
+#frm_field_1459-city_container,
+#frm_field_1459-state_container,
+#frm_field_1459-zip_container {
+  grid-column: auto;
+}
+
+/* ---------- Checkbox groups (currently vertical) ---------- */
+.vertical_radio .frm_opt_container {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+}
+
+.frm_checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #222;
+}
+
+/* Make checkboxes a little nicer spacing */
+.frm_checkbox input[type="checkbox"] {
+  transform: scale(1.05);
+}
+
+/* ---------- “Office use only” block ---------- */
+.frm_html_container {
+  background: #fafafa;
+  border: 1px dashed #d7d7d7;
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+  color: #444;
+  margin-top: 1.5rem;
+}
+
+/* ---------- Submit button ---------- */
+.frm_submit {
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: flex-end;
+}
+
+button.frm_button_submit {
+  appearance: none;
+  border: none;
+  background: #a51417;
+  color: #fff;
+  padding: 0.8rem 1.1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button.frm_button_submit:hover {
+  background: #7f1012;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 760px) {
+  .frm_forms {
+    padding: 1.25rem 1.1rem;
+  }
+
+  .frm_combo_inputs_container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Hide duplicate helper text that repeats labels for the address sub-fields */
+#frm_field_1459-line1_container .frm_description,
+#frm_field_1459-line2_container .frm_description,
+#frm_field_1459-city_container .frm_description,
+#frm_field_1459-state_container .frm_description,
+#frm_field_1459-zip_container .frm_description,
+#frm_field_1459-country_container .frm_description {
+  display: none;
+}
+
+/* Optional: tighten spacing if things look too tall */
+.frm_combo_inputs_container .frm_form_field {
+  margin-bottom: 0.85rem;
 }
